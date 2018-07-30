@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <ul>
+        {% for RateNAME,RatesValues in RateMin %}
+            {% for Source,Value in RatesValues %}
+                <li>{{ RateNAME }} : {{ Value }} - Source {{ Source }}</li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+
+{% endblock %}
